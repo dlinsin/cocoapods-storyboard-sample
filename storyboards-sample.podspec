@@ -28,10 +28,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes'
-  #s.resource_bundles = {
-  #  'storyboards-sample' => ['Pod/Assets/*.{lproj,storyboard}']
-  #}
-  s.resource = 'Pod/Assets/*.{lproj,storyboard}'
+  s.resource_bundles = {
+    'storyboards-sample' => ['Pod/Assets/*.{lproj,storyboard}']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
