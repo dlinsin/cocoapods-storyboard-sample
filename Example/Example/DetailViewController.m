@@ -44,7 +44,11 @@
 }
 
 - (IBAction)press:(id)sender {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"TestLocalization" bundle:[NSBundle mainBundle]];
+    // Note that we don't directly pull the storyboard here. Instead, we pull the bundle our storyboard
+    // is in our of the main bundle, then retrieve the storyboard from that inner bundle.
+    NSString *samplePodBundlePath = [[NSBundle mainBundle] pathForResource:@"storyboards-sample" ofType:@"bundle"];
+    NSBundle *sampleBundle = [NSBundle bundleWithPath:samplePodBundlePath];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"TestLocalization" bundle:sampleBundle];
     UIViewController *testController = [storyboard instantiateInitialViewController];
     [self presentViewController:testController animated:YES completion:nil];
 }
