@@ -1,0 +1,14 @@
+PODS:
+  - storyboards-sample (0.1.0)
+
+DEPENDENCIES:
+  - storyboards-sample (from `../`)
+
+EXTERNAL SOURCES:
+  storyboards-sample:
+    :path: ../
+
+SPEC CHECKSUMS:
+  storyboards-sample: 16d2885a7ddb05b919fb21e391aaf008b195b949
+
+COCOAPODS: 0.34.4

@@ -1,11 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'storyboards-sample', :exclusive => true do
+target 'Example', :exclusive => true do
   pod "storyboards-sample", :path => "../"
-end
-
-target 'Tests', :exclusive => true do
-  pod "storyboards-sample", :path => "../"
-
-  
 end
